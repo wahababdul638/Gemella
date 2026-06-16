@@ -1,7 +1,7 @@
 // Website Configuration - Tailored for String Instrument Players (Bravo Music style)
 window.WEBSITE_CONFIG = {
   "storeInfo": {
-    "name": "Gemelle",
+    "name": "Gemella",
     "tagline": "Everything for String Players",
     "phone": "02-xxx-xxxx",
     "hours": "Mon–Sat 10:00–19:00",
@@ -12,7 +12,7 @@ window.WEBSITE_CONFIG = {
   "hero": {
     "badge": "🎻 Masterpiece Collection 2026",
     "title": "Crafted for artists.<br>Designed for tone.<br>Your perfect match.",
-    "subtitle": "Gemelle — Thailand's premier destination for fine violins, cellos, double basses, and expert luthiery services. Shop strings, bows, and cases.",
+    "subtitle": "Gemella — Thailand's premier destination for fine violins, cellos, double basses, and expert luthiery services. Shop strings, bows, and cases.",
     "primaryBtn": {
       "text": "Browse Violins",
       "link": "#product-grid"
@@ -46,8 +46,8 @@ window.WEBSITE_CONFIG = {
   ],
   "products": [
     {
-      "name": "Gemelle Model 200 European Wood Violin",
-      "brand": "Gemelle Fine Strings",
+      "name": "Gemella Model 200 European Wood Violin",
+      "brand": "Gemella Fine Strings",
       "category": "violin",
       "tag": "new",
       "price": 18500,
@@ -76,8 +76,8 @@ window.WEBSITE_CONFIG = {
       "image": "images/violin_strings.png"
     },
     {
-      "name": "Gemelle Model 350 Hand-Varnished Cello",
-      "brand": "Gemelle Fine Strings",
+      "name": "Gemella Model 350 Hand-Varnished Cello",
+      "brand": "Gemella Fine Strings",
       "category": "cello",
       "tag": "best",
       "price": 48000,
@@ -145,7 +145,7 @@ window.WEBSITE_CONFIG = {
     }
   ],
   "brands": [
-    "Thomastik-Infeld", "Pirastro", "Larsen Strings", "Warchal", "Bam France", "Codabow", "Yamaha", "Martin", "Gemelle Fine Strings"
+    "Thomastik-Infeld", "Pirastro", "Larsen Strings", "Warchal", "Bam France", "Codabow", "Yamaha", "Martin", "Gemella Fine Strings"
   ],
   "newsletter": {
     "title": "Stay in Tune",
@@ -154,7 +154,7 @@ window.WEBSITE_CONFIG = {
     "buttonText": "Join Club"
   },
   "footer": {
-    "aboutText": "Gemelle is Bangkok's specialized string player shop. We offer premium violins, violas, cellos, double basses, expert setup, and professional restoration services.",
+    "aboutText": "Gemella is Bangkok's specialized string player shop. We offer premium violins, violas, cellos, double basses, expert setup, and professional restoration services.",
     "socials": [
       { "platform": "facebook", "icon": "ti-brand-facebook" },
       { "platform": "instagram", "icon": "ti-brand-instagram" },

@@ -1,6 +1,6 @@
 {
   "storeInfo": {
-    "name": "Gemelle",
+    "name": "Gemella",
     "tagline": "MUSIC STORE",
     "phone": "02-xxx-xxxx",
     "hours": "Mon–Sat 10:00–19:00",
@@ -11,7 +11,7 @@
   "hero": {
     "badge": "🎸 Mid-Year Sale 2026",
     "title": "Your sound.<br>Your stage.<br>Your instrument.",
-    "subtitle": "Gemelle — Thailand's premier music instrument store. Guitars, keyboards, drums & more. Up to 30% off selected items.",
+    "subtitle": "Gemella — Thailand's premier music instrument store. Guitars, keyboards, drums & more. Up to 30% off selected items.",
     "primaryBtn": {
       "text": "Shop the sale",
       "link": "#f-sale"
@@ -148,7 +148,7 @@
   ],
   "newsletter": {
     "title": "Stay in tune",
-    "subtitle": "Get the latest deals, new arrivals & music tips from Gemelle — straight to your inbox",
+    "subtitle": "Get the latest deals, new arrivals & music tips from Gemella — straight to your inbox",
     "placeholder": "Your email address",
     "buttonText": "Subscribe"
   },

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Check if configuration exists, otherwise fallback to basic dummy data
     const config = window.WEBSITE_CONFIG || {
-        storeInfo: { name: "Gemelle", tagline: "Everything for String Players" },
+        storeInfo: { name: "Gemella", tagline: "Everything for String Players" },
         products: []
     };
 
@@ -514,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     showToast("Your cart is empty!");
                     return;
                 }
-                showToast("🎉 Order placed successfully! Thank you for choosing Gemelle.");
+                showToast("🎉 Order placed successfully! Thank you for choosing Gemella.");
                 cart.length = 0; // Clear cart
                 renderCart();
                 closeCartDrawer();
