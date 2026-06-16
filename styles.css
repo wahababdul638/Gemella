@@ -1347,3 +1347,7 @@ a {
     100% { transform: rotate(0); }
 }
 
+.gemella-wrapper .promo-img-wrapper:hover {
+    transform: scale(1.1) rotate(3deg);
+    border-color: #fff !important;
+}

@@ -120,20 +120,55 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- Promo Banners ---
         const promosContainer = document.getElementById('promos-container');
         if (promosContainer && cfg.promoBanners) {
-            promosContainer.innerHTML = cfg.promoBanners.map((promo, idx) => `
-                <div class="col-md-6 reveal delay-${idx + 1}">
-                    <div class="promo-card h-100 d-flex flex-column justify-content-between" style="background: ${promo.gradient}">
-                        <div>
-                            <div class="promo-emoji">${promo.emoji}</div>
-                            <h3 class="promo-title">${promo.title}</h3>
-                            <p class="promo-text">${promo.subtitle}</p>
+            promosContainer.innerHTML = cfg.promoBanners.map((promo, idx) => {
+                const colClass = (idx === 2) ? 'col-12' : 'col-md-6';
+                
+                let imagesHtml = '';
+                if (promo.images && promo.images.length > 0) {
+                    imagesHtml = `
+                        <div class="d-flex gap-3 flex-wrap mt-3 mt-md-0 justify-content-start align-items-center">
+                            ${promo.images.map(img => `
+                                <div style="position: relative; width: 110px; height: 110px; border-radius: 12px; overflow: hidden; border: 3px solid rgba(255,255,255,0.4); box-shadow: var(--shadow-md); transition: var(--transition-bounce);" class="promo-img-wrapper">
+                                    <img src="${img}" alt="Adoption Cat" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            `).join('')}
                         </div>
-                        <div>
-                            <a href="${promo.btnLink}" class="btn btn-outline-white" style="padding: 8px 20px; font-size: 13px;">${promo.btnText}</a>
+                    `;
+                }
+
+                if (idx === 2) {
+                    return `
+                        <div class="${colClass} reveal delay-${idx + 1}">
+                            <div class="promo-card h-100 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4" style="background: ${promo.gradient}">
+                                <div style="flex: 1.2; max-width: 650px;">
+                                    <div class="promo-emoji">${promo.emoji}</div>
+                                    <h3 class="promo-title">${promo.title}</h3>
+                                    <p class="promo-text mb-0">${promo.subtitle}</p>
+                                </div>
+                                <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-4" style="flex: 0.8;">
+                                    ${imagesHtml}
+                                    <a href="${promo.btnLink}" class="btn btn-outline-white shrink-0" style="padding: 10px 24px; font-size: 14px;">${promo.btnText}</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            `).join('');
+                    `;
+                } else {
+                    return `
+                        <div class="${colClass} reveal delay-${idx + 1}">
+                            <div class="promo-card h-100 d-flex flex-column justify-content-between" style="background: ${promo.gradient}">
+                                <div>
+                                    <div class="promo-emoji">${promo.emoji}</div>
+                                    <h3 class="promo-title">${promo.title}</h3>
+                                    <p class="promo-text">${promo.subtitle}</p>
+                                </div>
+                                <div>
+                                    <a href="${promo.btnLink}" class="btn btn-outline-white" style="padding: 8px 20px; font-size: 13px;">${promo.btnText}</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            }).join('');
         }
 
         // --- Authorized Brands ---
