@@ -3,11 +3,14 @@ window.WEBSITE_CONFIG = {
   "storeInfo": {
     "name": "Gemella",
     "tagline": "Everything for String Players",
-    "phone": "02-xxx-xxxx",
+    "phone": "082-824-6699",
+    "email": "wahababdul638@gmail.com",
+    "line": "wahababdul638",
+    "instagram": "wahababdul638",
     "hours": "Mon–Sat 10:00–19:00",
     "freeShippingThreshold": 2000,
     "topBarMessage": "🎻 Premium String Instruments & Accessories | Free Shipping over ฿2,000",
-    "contactMessage": "📞 Call: 082-824-6699 &nbsp;|&nbsp; Line: @gemelle"
+    "contactMessage": "📞 Call: 082-824-6699 &nbsp;|&nbsp; Line: wahababdul638 &nbsp;|&nbsp; Email: wahababdul638@gmail.com"
   },
   "hero": {
     "badge": "🎻 Masterpiece Collection 2026",
@@ -165,11 +168,9 @@ window.WEBSITE_CONFIG = {
   "footer": {
     "aboutText": "Gemella is Bangkok's specialized string player shop. We offer premium violins, violas, cellos, double basses, expert setup, and professional restoration services.",
     "socials": [
-      { "platform": "facebook", "icon": "ti-brand-facebook" },
-      { "platform": "instagram", "icon": "ti-brand-instagram" },
-      { "platform": "line", "icon": "ti-brand-line" },
-      { "platform": "youtube", "icon": "ti-brand-youtube" },
-      { "platform": "tiktok", "icon": "ti-brand-tiktok" }
+      { "platform": "instagram", "icon": "ti-brand-instagram", "link": "https://instagram.com/wahababdul638" },
+      { "platform": "line", "icon": "ti-brand-line", "link": "https://line.me/ti/p/~wahababdul638" },
+      { "platform": "email", "icon": "ti-mail", "link": "mailto:wahababdul638@gmail.com" }
     ]
   }
 };

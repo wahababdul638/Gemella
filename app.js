@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (footerSocials && cfg.footer && cfg.footer.socials) {
             footerSocials.innerHTML = cfg.footer.socials.map(soc => `
-                <a href="#" class="social-icon" aria-label="${soc.platform}">
+                <a href="${soc.link || '#'}" class="social-icon" aria-label="${soc.platform}" target="_blank">
                     <i class="ti ${soc.icon}" aria-hidden="true"></i>
                 </a>
             `).join('');
@@ -224,7 +224,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="footer-contact-item">
                     <i class="ti ti-mail" aria-hidden="true"></i>
-                    <span>info@${cfg.storeInfo.name.toLowerCase()}.th</span>
+                    <span>${cfg.storeInfo.email}</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="ti ti-brand-line" aria-hidden="true"></i>
+                    <span>Line ID: ${cfg.storeInfo.line}</span>
                 </div>
                 <div class="footer-contact-item">
                     <i class="ti ti-clock" aria-hidden="true"></i>
@@ -434,6 +438,34 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('search-overlay').classList.remove('show');
     }
 
+    // 4.5. CHECKOUT MODAL HANDLERS
+    function openCheckoutModal(totalPrice) {
+        const modal = document.getElementById('checkout-modal-overlay');
+        const totalAmountEl = document.getElementById('checkout-total-amount');
+        const qrImage = document.getElementById('checkout-qr-image');
+        
+        if (totalAmountEl) {
+            totalAmountEl.textContent = new Intl.NumberFormat('th-TH', { style: 'currency', currency: 'THB', maximumFractionDigits: 0 }).format(totalPrice);
+        }
+        
+        if (qrImage) {
+            // Encode payment instructions and total price
+            const encodedData = encodeURIComponent(`Pay ${totalPrice} THB to Gemella. Line: wahababdul638`);
+            qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodedData}`;
+        }
+        
+        if (modal) {
+            modal.classList.add('show');
+        }
+    }
+
+    function closeCheckoutModal() {
+        const modal = document.getElementById('checkout-modal-overlay');
+        if (modal) {
+            modal.classList.remove('show');
+        }
+    }
+
     // 5. INTERACTIVE EVENTS AND LISTENERS
     function initInteractiveEvents(cfg) {
         // --- Click listener for action triggers ---
@@ -549,16 +581,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     showToast("Your cart is empty!");
                     return;
                 }
-                showToast("🎉 Order placed successfully! Thank you for choosing Gemella.");
+                closeCartDrawer();
+                let totalPrice = 0;
+                cart.forEach(item => {
+                    totalPrice += item.product.price * item.quantity;
+                });
+                openCheckoutModal(totalPrice);
+            }
+
+            // Checkout modal close clicks
+            if (e.target.id === 'checkout-modal-close' || e.target.id === 'checkout-modal-overlay') {
+                closeCheckoutModal();
+            }
+
+            // Confirm payment button click
+            if (e.target.id === 'confirm-payment-btn') {
+                window.open("https://line.me/ti/p/~wahababdul638", "_blank");
+                showToast("🎉 Order placed! Sending you to Line to upload your payment slip.");
                 cart.length = 0; // Clear cart
                 renderCart();
-                closeCartDrawer();
+                closeCheckoutModal();
             }
 
             // Social links click
             if (e.target.closest('.social-icon')) {
-                e.preventDefault();
-                showToast("Opening social media profile...");
+                const link = e.target.closest('.social-icon').getAttribute('href');
+                if (!link || link === '#') {
+                    e.preventDefault();
+                    showToast("Opening social media profile...");
+                }
             }
         });
 
@@ -585,6 +636,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Escape') {
                 closeCartDrawer();
                 closeSearchOverlay();
+                closeCheckoutModal();
             }
         });
 

@@ -171,6 +171,55 @@
         </div>
     </div>
 
+    <!-- CHECKOUT PAYMENT MODAL -->
+    <div class="checkout-modal-overlay" id="checkout-modal-overlay">
+        <div class="checkout-modal-card">
+            <button class="checkout-modal-close" id="checkout-modal-close" aria-label="Close checkout">
+                <i class="ti ti-x"></i>
+            </button>
+            <div class="checkout-modal-header text-center">
+                <div class="checkout-modal-icon">
+                    <i class="ti ti-wallet"></i>
+                </div>
+                <h3 class="checkout-modal-title mt-2">Complete Your Order</h3>
+                <p class="text-muted text-sm">Scan QR code to pay via PromptPay or Bank Transfer</p>
+            </div>
+            <div class="checkout-modal-body text-center">
+                <div class="order-summary-box mb-3">
+                    <span class="text-muted text-xs d-block">TOTAL AMOUNT</span>
+                    <span class="fw-bold fs-3 text-accent" id="checkout-total-amount">฿0</span>
+                </div>
+                
+                <!-- PromptPay QR Card Simulator -->
+                <div class="promptpay-qr-card mx-auto mb-3">
+                    <div class="promptpay-header d-flex justify-content-between align-items-center px-3 py-2">
+                        <span class="promptpay-logo">Prompt Pay</span>
+                        <i class="ti ti-qrcode text-white" style="font-size: 20px;"></i>
+                    </div>
+                    <div class="qr-code-wrapper p-3 bg-white d-flex justify-content-center align-items-center">
+                        <img id="checkout-qr-image" src="" alt="Payment QR Code" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="promptpay-footer py-2 text-center text-xs text-white">
+                        Gemella Music Store
+                    </div>
+                </div>
+
+                <div class="payment-instructions text-start p-3 rounded bg-light mb-4">
+                    <h5 class="fs-6 fw-bold mb-2"><i class="ti ti-info-circle me-1 text-accent"></i> How to pay:</h5>
+                    <ol class="text-xs text-muted ps-3 mb-0" style="line-height: 1.6;">
+                        <li>Scan the QR code above with your mobile banking app.</li>
+                        <li>Verify the total amount matches your order.</li>
+                        <li>Send your payment slip to us via Line: <strong>wahababdul638</strong> or Email: <strong>wahababdul638@gmail.com</strong>.</li>
+                    </ol>
+                </div>
+                
+                <button class="btn btn-primary w-100 py-3" id="confirm-payment-btn">
+                    Confirm Payment & Send Slip 💬
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- FOOTER SECTION -->
     <footer class="main-footer">
         <div class="container-fluid px-lg-4">
