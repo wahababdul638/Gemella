@@ -4,3 +4,7 @@ Thumbs.db
 
 # Ignore log files
 *.log
+
+# Ignore archive files
+*.tar.gz
+*.zip
