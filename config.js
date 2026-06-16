@@ -142,15 +142,6 @@ window.WEBSITE_CONFIG = {
       "btnText": "Learn More",
       "btnLink": "#",
       "gradient": "linear-gradient(135deg, #fbbf24, #b45309)"
-    },
-    {
-      "emoji": "🐱",
-      "title": "Special Adoption: The Studio Troublemakers",
-      "subtitle": "Free cats if anyone wants to adopt them! WARNING: All subsequent damage, scratched cello cases, clawed bridge feet, and knocked-over music stands are 100% your responsibility.",
-      "btnText": "Adopt Now 🐾",
-      "btnLink": "#",
-      "gradient": "linear-gradient(135deg, #b45309, #78350f)",
-      "images": ["images_banner/26469.jpg", "images_banner/3268.jpg"]
     }
   ],
   "brands": [
