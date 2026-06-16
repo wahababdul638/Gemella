@@ -1,0 +1,6 @@
+# Ignore OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log

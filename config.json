@@ -1,0 +1,164 @@
+{
+  "storeInfo": {
+    "name": "Gemelle",
+    "tagline": "MUSIC STORE",
+    "phone": "02-xxx-xxxx",
+    "hours": "Mon–Sat 10:00–19:00",
+    "freeShippingThreshold": 2000,
+    "topBarMessage": "🎵 Free shipping on orders over ฿2,000",
+    "contactMessage": "📞 02-xxx-xxxx &nbsp;|&nbsp; Mon–Sat 10:00–19:00"
+  },
+  "hero": {
+    "badge": "🎸 Mid-Year Sale 2026",
+    "title": "Your sound.<br>Your stage.<br>Your instrument.",
+    "subtitle": "Gemelle — Thailand's premier music instrument store. Guitars, keyboards, drums & more. Up to 30% off selected items.",
+    "primaryBtn": {
+      "text": "Shop the sale",
+      "link": "#f-sale"
+    },
+    "secondaryBtn": {
+      "text": "View all products",
+      "link": "#product-grid"
+    },
+    "stats": [
+      { "emoji": "🎸", "label": "Guitars", "count": "500+ models" },
+      { "emoji": "🎹", "label": "Keyboards", "count": "200+ models" },
+      { "emoji": "🥁", "label": "Drums", "count": "150+ models" }
+    ]
+  },
+  "trustBadges": [
+    { "icon": "ti-truck-delivery", "text": "Free shipping ฿2,000+" },
+    { "icon": "ti-shield-check", "text": "Official warranty" },
+    { "icon": "ti-refresh", "text": "30-day returns" },
+    { "icon": "ti-credit-card", "text": "Installment plans" },
+    { "icon": "ti-headset", "text": "Expert support" }
+  ],
+  "categories": [
+    { "emoji": "🎸", "name": "Guitar", "filter": "guitar" },
+    { "emoji": "🎹", "name": "Keyboard", "filter": "keyboard" },
+    { "emoji": "🥁", "name": "Drums", "filter": "drums" },
+    { "emoji": "🎻", "name": "Strings", "filter": "strings" },
+    { "emoji": "sax", "name": "Wind", "filter": "wind" },
+    { "emoji": "🔊", "name": "Amplifiers", "filter": "amplifiers" },
+    { "emoji": "🎤", "name": "Microphones", "filter": "microphones" },
+    { "emoji": "🎛️", "name": "DJ & Studio", "filter": "dj-studio" }
+  ],
+  "products": [
+    {
+      "name": "Fender Player II Stratocaster",
+      "brand": "Fender",
+      "category": "guitar",
+      "tag": "new",
+      "price": 28500,
+      "oldPrice": null,
+      "stock": true,
+      "image": "fender_stratocaster"
+    },
+    {
+      "name": "Yamaha PSR-SX900 Arranger",
+      "brand": "Yamaha",
+      "category": "keyboard",
+      "tag": "sale",
+      "price": 54000,
+      "oldPrice": 62000,
+      "stock": true,
+      "image": "yamaha_keyboard"
+    },
+    {
+      "name": "Roland TD-17KVX V-Drums",
+      "brand": "Roland",
+      "category": "drums",
+      "tag": "best",
+      "price": 64900,
+      "oldPrice": null,
+      "stock": true,
+      "image": "roland_vdrums"
+    },
+    {
+      "name": "Gibson Les Paul Standard '60s",
+      "brand": "Gibson",
+      "category": "guitar",
+      "tag": "sale",
+      "price": 89000,
+      "oldPrice": 99000,
+      "stock": true,
+      "image": "gibson_lespaul"
+    },
+    {
+      "name": "Korg Minilogue XD Synthesizer",
+      "brand": "Korg",
+      "category": "keyboard",
+      "tag": "new",
+      "price": 24500,
+      "oldPrice": null,
+      "stock": false,
+      "image": "korg_synthesizer"
+    },
+    {
+      "name": "Martin DX1E Acoustic Guitar",
+      "brand": "Martin",
+      "category": "guitar",
+      "tag": "best",
+      "price": 27000,
+      "oldPrice": null,
+      "stock": true,
+      "image": "martin_acoustic"
+    },
+    {
+      "name": "Pearl Export EXX Drum Kit",
+      "brand": "Pearl",
+      "category": "drums",
+      "tag": "sale",
+      "price": 31500,
+      "oldPrice": 35000,
+      "stock": true,
+      "image": "pearl_drums"
+    },
+    {
+      "name": "Shure SM7B Vocal Microphone",
+      "brand": "Shure",
+      "category": "microphones",
+      "tag": "best",
+      "price": 14500,
+      "oldPrice": null,
+      "stock": true,
+      "image": "shure_sm7b"
+    }
+  ],
+  "promoBanners": [
+    {
+      "emoji": "🎸",
+      "title": "Guitar starter pack",
+      "subtitle": "Everything you need to begin your guitar journey",
+      "btnText": "Shop now",
+      "btnLink": "#",
+      "gradient": "linear-gradient(135deg, #1D9E75, #085041)"
+    },
+    {
+      "emoji": "🔄",
+      "title": "Trade-in program",
+      "subtitle": "Upgrade your gear — trade in your old instrument",
+      "btnText": "Learn more",
+      "btnLink": "#",
+      "gradient": "linear-gradient(135deg, #534AB7, #26215C)"
+    }
+  ],
+  "brands": [
+    "Fender", "Gibson", "Yamaha", "Roland", "Korg", "Ibanez", "Pearl", "Shure", "Boss", "Martin"
+  ],
+  "newsletter": {
+    "title": "Stay in tune",
+    "subtitle": "Get the latest deals, new arrivals & music tips from Gemelle — straight to your inbox",
+    "placeholder": "Your email address",
+    "buttonText": "Subscribe"
+  },
+  "footer": {
+    "aboutText": "Bangkok's premier music store. Quality instruments, expert advice, unbeatable prices.",
+    "socials": [
+      { "platform": "facebook", "icon": "ti-brand-facebook" },
+      { "platform": "instagram", "icon": "ti-brand-instagram" },
+      { "platform": "line", "icon": "ti-brand-line" },
+      { "platform": "youtube", "icon": "ti-brand-youtube" }
+    ]
+  }
+}
